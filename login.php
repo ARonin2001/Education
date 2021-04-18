@@ -10,7 +10,7 @@
         $count = mysqli_num_rows($result);
 
         if($count == 1) {
-            $query = "SELECT Name FROM departament_users WHERE autorization_info_ID = (SELECT ID FROM autorization_info WHERE Email = '$Email')";
+            $query = "SELECT * FROM departament_users WHERE autorization_info_ID = (SELECT ID FROM autorization_info WHERE Email = '$Email')";
             // $query = "SELECT * FROM departament_users WHERE autorization_info_ID = 2";
             $resultName = mysqli_query($link, $query) or die(mysqli_error($link));
             $row = mysqli_fetch_row($resultName);
@@ -19,13 +19,13 @@
             setcookie ("name", "");
             setcookie ("surName", "");
             setcookie ("fatherName", "");
+            setcookie("mail", "");
 
             setcookie("name", $row[1]);
             setcookie("surName", $row[2]);
             setcookie("fatherName", $row[3]);
-
+            setcookie("mail", $Email);
             // 
-
 
             if(!isset($_COOKIE["fatherName"]))
                 setcookie("fatherName", " ");

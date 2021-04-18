@@ -114,7 +114,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 920px;
-  height: inherit;
 }
 
 .form-main {
@@ -185,7 +184,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 500px;
+  position: relative;
 }
 
 .user__name span,
@@ -244,6 +243,113 @@ body {
 .user__capabilities-container button {
   margin-bottom: 10px;
   width: 430px;
+}
+
+.user .btn__logout {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.choice {
+  padding: 20px;
+  background: #ffffff;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.choice .title {
+  margin-top: 0;
+}
+
+.choice__block {
+  margin-top: 40px;
+}
+
+.choice .input-group-text {
+  background: gray;
+  color: #e2cece;
+}
+
+.choice .form-control {
+  height: 40px;
+}
+
+.choice__plus-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.choice__btn_next {
+  height: 40px;
+  width: 200px;
+}
+
+.choice__btn-plus {
+  height: 40px;
+  width: 40px;
+  border: 5px solid #ffffff;
+  border-radius: 12px;
+  background: gray;
+  color: #ffffff;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  margin-top: 10px;
+}
+
+.choice__btn-plus:hover {
+  border: 5px solid gray;
+  color: gray;
+  background: #ffffff;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.choice .list-group {
+  overflow: hidden;
+  height: 0;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.choice .list-group-item:hover {
+  background-color: gray;
+  color: #ffffff;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.choice .list-group_active {
+  height: 100%;
+}
+
+.list {
+  position: absolute;
+  bottom: 0;
+  max-height: 700px;
+  max-width: 500px;
+  min-width: 400px;
+}
+
+.list .badge {
+  background-color: #5181b8;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.list-group {
+  max-height: 310px;
+  overflow-y: auto;
 }
 @supports (-webkit-appearance:none){
 
